@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Del Mar Zamora Flores — Economist</title>
+<meta name="description" content="María Del Mar Zamora Flores, Ph.D. candidate in Economics at Tulane University. Research on child development, education, and human capital in developing countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAFA; --card:#FFFFFF; --ink:#22262A; --ink-soft:#64707A;
+    --accent:#276A6E; --accent-soft:#F0F4F3; --border:#E6E8E6; --max:860px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--accent);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  h1,h2,h3{font-family:'Inter',sans-serif; margin:0;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+  nav.top{position:sticky; top:0; z-index:10; background:rgba(250,250,250,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--border);}
+  nav.top .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+  nav.top .brand{font-weight:700; color:var(--ink); text-decoration:none; font-size:0.95rem;}
+  nav.top ul{list-style:none; display:flex; gap:22px; margin:0; padding:0;}
+  nav.top ul a{color:var(--ink-soft); text-decoration:none; font-size:0.88rem; font-weight:500;}
+  nav.top ul a:hover{color:var(--accent);}
+
+  header.hero{padding:60px 0 20px; text-align:center;}
+  .avatar-img{width:140px; height:140px; border-radius:50%; object-fit:cover; border:4px solid var(--card); box-shadow:0 0 0 1px var(--border);}
+  header.hero h1{font-size:1.9rem; font-weight:700; margin:18px 0 6px;}
+  header.hero .role{color:var(--ink); font-size:1.05rem; font-weight:500; margin:0 0 2px;}
+  header.hero .aff{color:var(--ink-soft); font-size:0.95rem; text-decoration:none;}
+  header.hero .aff:hover{color:var(--accent);}
+  .icon-row{display:flex; justify-content:center; gap:12px; margin:18px 0 4px;}
+  .icon-btn{width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--card); border:1px solid var(--border); color:var(--ink-soft); text-decoration:none;}
+  .icon-btn:hover{color:var(--accent); border-color:var(--accent);}
+  .icon-btn svg{width:18px; height:18px;}
+  .icon-text{font-weight:700; font-size:0.82rem;}
+
+  section{padding:36px 0; border-top:1px solid var(--border);}
+  .eyebrow{font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:0 0 14px;}
+
+  .about p{max-width:62ch; margin:0 auto 20px; color:var(--ink); font-size:1rem;}
+  .about{text-align:center;}
+  .btn-solid{display:inline-block; background:var(--accent); color:#FFFFFF; font-weight:600; font-size:0.9rem; padding:11px 22px; border-radius:7px; text-decoration:none;}
+  .btn-solid:hover{opacity:0.88; color:#FFFFFF;}
+
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+  .list-plain{list-style:none; margin:0; padding:0;}
+  .list-plain li{padding:8px 0; border-bottom:1px dotted var(--border); font-size:0.94rem;}
+  .list-plain li:last-child{border-bottom:none;}
+  .list-plain .yr{color:var(--ink-soft); font-size:0.82rem; float:right; padding-left:10px;}
+  .list-plain .sub{display:block; color:var(--ink-soft); font-size:0.86rem;}
+
+  .featured-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .feat-card{background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; text-decoration:none; color:var(--ink); display:block;}
+  .feat-card svg{display:block; width:100%; height:auto;}
+  .feat-card .tag{display:inline-block; margin:16px 20px 0; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--accent); font-weight:700;}
+  .feat-card h3{font-size:1.02rem; margin:8px 20px 16px; line-height:1.4;}
+
+  .pub-list{display:flex; flex-direction:column; gap:20px;}
+  .pub-item{font-size:0.95rem;}
+  .pub-item .authors{color:var(--ink-soft);}
+  .pub-item .title{color:var(--ink); font-weight:600;}
+  .pub-item .venue{color:var(--ink-soft); font-size:0.88rem; display:block; margin-top:2px;}
+  .pub-item .tags{margin-top:6px;}
+  .pub-item .tags a{font-size:0.82rem; font-weight:600; margin-right:14px; text-decoration:none; border-bottom:1px solid var(--border);}
+  .pub-item .tags a:hover{border-color:var(--accent);}
+
+  footer{padding:36px 0 60px; text-align:center;}
+  footer p{margin:0 0 14px; color:var(--ink-soft); font-size:0.82rem;}
+
+  @media (max-width:640px){
+    .grid-2, .featured-grid{grid-template-columns:1fr;}
+    nav.top ul{gap:12px;}
+    header.hero h1{font-size:1.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">María Zamora Flores</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="cv.pdf">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="photo.jpg" alt="María Del Mar Zamora Flores" class="avatar-img">
+    <h1>María Del Mar Zamora Flores</h1>
+    <p class="role">Ph.D. Candidate in Economics</p>
+    <a class="aff" href="https://liberalarts.tulane.edu/departments/economics" target="_blank" rel="noopener">Tulane University</a>
+    <div class="icon-row">
+      <a class="icon-btn" href="mailto:mzamoraflores@tulane.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/maria-del-mar-zamora-flores" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon-text">in</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <div class="wrap">
+    <p>I study how public programs meant for one member of a household change outcomes for everyone else in it — sibling caregivers in Mexico, working children in Bolivia, and mothers and infants years after a health transfer ends. My work sits at the intersection of development economics, the economics of education, and public policy, using administrative and survey data from Bolivia and Mexico.</p>
+    <a class="btn-solid" href="cv.pdf">Download CV</a>
+  </div>
+</section>
+
+<section id="interests-education">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow">Interests</p>
+      <ul class="list-plain">
+        <li>Development Economics</li>
+        <li>Economics of Education</li>
+        <li>Public Policy</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Education</p>
+      <ul class="list-plain">
+        <li>Ph.D. Economics<span class="sub">Tulane University, 2023–2028</span></li>
+        <li>M.Sc. Economic Development &amp; Growth<span class="sub">Universidad Carlos III de Madrid, 2021–22</span></li>
+        <li>B.S. Economics<span class="sub">Universidad Católica Boliviana, 2016–21</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <p class="eyebrow">Featured Research</p>
+    <div class="featured-grid">
+      <a class="feat-card" href="prospectus.pdf">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="220" fill="#F0F4F3"/>
+          <line x1="120" y1="110" x2="200" y2="70" stroke="#276A6E" stroke-width="2" opacity="0.5"/>
+          <line x1="200" y1="70" x2="280" y2="120" stroke="#276A6E" stroke-width="2" opacity="0.5"/>
+          <line x1="120" y1="110" x2="280" y2="120" stroke="#276A6E" stroke-width="2" opacity="0.3"/>
+          <circle cx="120" cy="110" r="26" fill="#FFFFFF" stroke="#276A6E" stroke-width="2.5"/>
+          <circle cx="200" cy="70" r="34" fill="#276A6E"/>
+          <circle cx="280" cy="120" r="20" fill="#FFFFFF" stroke="#276A6E" stroke-width="2.5"/>
+        </svg>
+        <span class="tag">Job Market Paper</span>
+        <h3>Delegated Care and Household Production: Sibling Spillovers from Public Childcare</h3>
+      </a>
+      <a class="feat-card" href="essay3.pdf">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="220" fill="#F0F4F3"/>
+          <line x1="60" y1="180" x2="340" y2="180" stroke="#C9D2D0" stroke-width="1.5"/>
+          <rect x="90" y="140" width="34" height="40" fill="#276A6E" opacity="0.35"/>
+          <rect x="180" y="110" width="34" height="70" fill="#276A6E" opacity="0.6"/>
+          <rect x="270" y="70" width="34" height="110" fill="#276A6E"/>
+          <line x1="107" y1="128" x2="107" y2="150" stroke="#276A6E" stroke-width="2"/><circle cx="107" cy="139" r="5" fill="#FFFFFF" stroke="#276A6E" stroke-width="2"/>
+          <line x1="197" y1="95" x2="197" y2="122" stroke="#276A6E" stroke-width="2"/><circle cx="197" cy="108" r="5" fill="#FFFFFF" stroke="#276A6E" stroke-width="2"/>
+          <line x1="287" y1="52" x2="287" y2="82" stroke="#276A6E" stroke-width="2"/><circle cx="287" cy="67" r="5" fill="#FFFFFF" stroke="#276A6E" stroke-width="2"/>
+        </svg>
+        <span class="tag">Working Paper</span>
+        <h3>Healthcare Investment, Human Capital, and Dynamic Complementarity in a Developing Setting</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="all-research">
+  <div class="wrap">
+    <p class="eyebrow">All Research</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <span class="authors">Zamora Flores, M.</span> — <span class="title">Delegated Care and Household Production: Sibling Spillovers from Public Childcare</span>
+        <span class="venue">Working paper (Job Market Paper)</span>
+        <div class="tags"><a href="prospectus.pdf">PDF</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Zamora Flores, M.</span> — <span class="title">The Search Trap: Job-Seeking Frictions and Human Capital Scarring from Child Labor Laws</span>
+        <span class="venue">Working paper</span>
+        <div class="tags"><a href="prospectus.pdf">PDF</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Zamora Flores, M.</span> — <span class="title">Healthcare Investment, Human Capital, and Dynamic Complementarity in a Developing Setting</span>
+        <span class="venue">Working paper</span>
+        <div class="tags"><a href="essay3.pdf">PDF</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Chinsinga, M. &amp; Zamora Flores, M.</span> — <span class="title">Droughts, Policy Response, and Human Capital Formation: Evidence from Malawi</span>
+        <span class="venue">Work in progress</span>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Zamora Flores, M. (2021)</span> — <span class="title">Carrera versus Familia: Las consecuencias del embarazo adolescente que enfrentan las jóvenes bolivianas</span>
+        <span class="venue">Working Paper, IISEC</span>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Barragán, Belzu, Cortéz &amp; Zamora Flores (2020)</span> — <span class="title">Crecimiento Inclusivo en Bolivia de 2002 a 2019</span>
+        <span class="venue">Redes N°6, Universidad Católica Boliviana</span>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Chive, Gonzales Portal &amp; Zamora Flores (2020)</span> — <span class="title">Principales determinantes de la pobreza en Bolivia</span>
+        <span class="venue">Redes N°6, Universidad Católica Boliviana</span>
+      </div>
+      <div class="pub-item">
+        <span class="authors">Barragán, Tito, Wanderley &amp; Zamora Flores (2020)</span> — <span class="title">La situación de los Derechos de la Niñez y Adolescencia en Bolivia frente a la Pandemia</span>
+        <span class="venue">InfoIISEC N°4, IISEC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow">Teaching — Tulane University (TA)</p>
+      <ul class="list-plain">
+        <li>Intermediate Macroeconomics<span class="yr">2026</span></li>
+        <li>Introductory Macroeconomics<span class="yr">Spr. 2026</span></li>
+        <li>Intermediate Microeconomics<span class="yr">2025</span></li>
+        <li>Introductory Microeconomics<span class="yr">Spr. 2025</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Teaching — Universidad Católica Boliviana (TA)</p>
+      <ul class="list-plain">
+        <li>Macroeconomics<span class="yr">2018–20</span></li>
+        <li>Econometrics (Time Series)<span class="yr">2018–20</span></li>
+        <li>Microeconomics<span class="yr">2018–20</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Research Experience</p>
+    <ul class="list-plain">
+      <li>Research Assistant to Prof. Alberto Rivera-Padilla, Tulane University<span class="yr">2026</span></li>
+      <li>Research Assistant, Inter-American Development Bank, La Paz<span class="yr">2023</span></li>
+      <li>Research Assistant, Labor Market &amp; Gender, Fundación ARU, La Paz<span class="yr">2023</span></li>
+      <li>Junior Researcher / Research Assistant, IISEC, La Paz<span class="yr">2020–2023</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap">
+    <p class="eyebrow">Awards &amp; Fellowships</p>
+    <ul class="list-plain">
+      <li>Tulane University School of Liberal Arts Fellowship<span class="yr">2023–present</span></li>
+      <li>2nd Place, Graduate Thesis Category, 16th EEB — Bolivia's Central Bank<span class="yr">2023</span></li>
+      <li>1st Place, Undergraduate Thesis Category, 14th EEB — Bolivia's Central Bank<span class="yr">2021</span></li>
+      <li>Hanns Seidel Foundation Scholarship, IISEC<span class="yr">2020</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="details">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow">Languages</p>
+      <p style="color:var(--ink-soft); font-size:0.94rem;">Spanish (native), English (B2), French (B2)</p>
+    </div>
+    <div>
+      <p class="eyebrow">Software</p>
+      <p style="color:var(--ink-soft); font-size:0.94rem;">Stata, R, LaTeX, Python</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p>© 2026 María Del Mar Zamora Flores</p>
+    <div class="icon-row">
+      <a class="icon-btn" href="mailto:mzamoraflores@tulane.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/maria-del-mar-zamora-flores" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="icon-text">in</span></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
